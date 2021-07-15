@@ -30,4 +30,5 @@ jobs:
         run: |
           brew update
           brew install molten-vk
-          ls /
+          ls /Applications
+          ls /usr
