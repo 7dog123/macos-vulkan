@@ -32,3 +32,4 @@ jobs:
           brew install wget
           wget https://sdk.lunarg.com/sdk/download/1.2.182.0/mac/vulkansdk-macos-1.2.182.0.dmg
           hdiutil mount vulkansdk-macos-1.2.182.0.dmg
+          ls "/Volumes/vulkansdk-macos-1.2.182.0"
