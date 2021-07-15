@@ -29,8 +29,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           brew update
-          brew install wget
-          wget https://sdk.lunarg.com/sdk/download/1.2.182.0/mac/vulkansdk-macos-1.2.182.0.dmg
-          hdiutil mount vulkansdk-macos-1.2.182.0.dmg
-          installer -package "/Volumes/vulkansdk-macos-1.2.182.0/InstallVulkan.app"
-          hdiutil mount vulkansdk-macos-1.2.182.0.dmg
+          brew install molten-vk
+          ls /usr/lib
+          ls /usr/include
