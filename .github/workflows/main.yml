@@ -29,4 +29,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           wget https://sdk.lunarg.com/sdk/download/1.2.182.0/mac/vulkansdk-macos-1.2.182.0.dmg
-          ./vulkansdk-macos-1.2.182.0.dmg
+          sudo ./vulkansdk-macos-1.2.182.0.dmg
