@@ -32,4 +32,4 @@ jobs:
           hdiutil attach vulkansdk-macos-1.2.182.0.dmg
           ls /Volumes/vulkansdk-macos-1.2.182.0
           sudo cp -R /Volumes/vulkansdk-macos-1.2.182.0/InstallVulkan.app /Applications
-          hdiutils unmount vulkansdk-macos-1.2.182.0.dmg
+          hdiutil unmount vulkansdk-macos-1.2.182.0.dmg
