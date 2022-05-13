@@ -31,8 +31,21 @@ jobs:
           wget -q https://sdk.lunarg.com/sdk/download/1.3.211.0/mac/vulkansdk-macos-1.3.211.0.dmg
           hdiutil attach vulkansdk-macos-1.3.211.0.dmg
           cd /Volumes/vulkansdk-macos-1.3.211.0
-          sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK/1.3.211.0 --accept-licenses --default-answer --confirm-command install
-          ls ~/VulkanSDK/1.3.211.0
+          sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root $GITHUB_WORKSPACE/1.3.211.0 --accept-licenses --default-answer --confirm-command install
+          ls $GITHUB_WORKSPACE/1.3.211.0
           #sudo cp -Rv /Volumes/vulkansdk-macos-1.2.182.0/InstallVulkan.app /Applications
           #hdiutil unmount vulkansdk-macos-1.2.182.0.dmg -force
+
+      - name: Prepare ps2dev folder
+        run: |
+          tar -zcvf vulkanSDK.tar.gz $GITHUB_WORKSPACE/1.3.211.0/macOS/*
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: vulkanSDK.tar.gz
+          tag_name: latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
