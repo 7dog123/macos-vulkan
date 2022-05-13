@@ -33,8 +33,6 @@ jobs:
           cd /Volumes/vulkansdk-macos-1.3.211.0
           sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root $GITHUB_WORKSPACE/1.3.211.0 --accept-licenses --default-answer --confirm-command install
 
-      - name: unmount dmg
-        run: hdiutil unmount vulkansdk-macos-1.3.211.0.dmg -force
       - name: Prepare ps2dev folder
         run: |
           tar -zcvf vulkanSDK.tar.gz 1.3.211.0/macOS/*
