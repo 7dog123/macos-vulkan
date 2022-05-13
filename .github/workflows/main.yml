@@ -28,9 +28,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          wget https://sdk.lunarg.com/sdk/download/1.2.182.0/mac/vulkansdk-macos-1.2.182.0.dmg
+          wget -q https://sdk.lunarg.com/sdk/download/1.2.182.0/mac/vulkansdk-macos-1.2.182.0.dmg
           hdiutil attach vulkansdk-macos-1.2.182.0.dmg
           ls /Volumes/vulkansdk-macos-1.2.182.0
           sudo cp -R /Volumes/vulkansdk-macos-1.2.182.0/InstallVulkan.app /Applications
-          hdiutil unmount vulkansdk-macos-1.2.182.0.dmg
+          hdiutil unmount vulkansdk-macos-1.2.182.0.dmg --force
 
