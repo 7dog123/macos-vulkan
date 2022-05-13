@@ -38,7 +38,7 @@ jobs:
 
       - name: Prepare ps2dev folder
         run: |
-          tar -zcvf vulkanSDK.tar.gz $GITHUB_WORKSPACE/1.3.211.0/macOS/*
+          tar -zcvf vulkanSDK.tar.gz 1.3.211.0/* #macOS/*
 
       - name: Release
         if: github.ref == 'refs/heads/master'
