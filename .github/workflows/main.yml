@@ -32,7 +32,7 @@ jobs:
           hdiutil attach vulkansdk-macos-1.3.211.0.dmg
           cd /Volumes/vulkansdk-macos-1.3.211.0
           sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root $GITHUB_WORKSPACE/1.3.211.0 --accept-licenses --default-answer --confirm-command install
-          cat 1.3.211.0/setup-env.sh
+          cat $GITHUB_WORKSPACE/1.3.211.0/setup-env.sh
 
       - name: Prepare ps2dev folder
         run: |
