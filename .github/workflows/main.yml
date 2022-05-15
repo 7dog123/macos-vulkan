@@ -37,7 +37,7 @@ jobs:
 
       - name: Prepare ps2dev folder
         run: |
-          tar -zcvf $GITHUB_WORKSPACE/vulkanSDK.tar.gz /usr/local/VulkanSDK
+          tar -zcvf VulkanSDK.tar.gz /usr/local/VulkanSDK
 
       #- name: Release
         #if: github.ref == 'refs/heads/master'
@@ -53,6 +53,6 @@ jobs:
       - name: Upload Package
         uses: actions/upload-artifact@v1
         with:
-          path: $GITHUB_WORKSPACE/vulkanSDK.tar.gz
+          path: VulkanSDK.tar.gz
           name: VulkanSDK
 
