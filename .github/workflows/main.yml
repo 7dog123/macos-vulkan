@@ -32,5 +32,6 @@ jobs:
           hdiutil attach vulkansdk-macos-1.3.211.0.dmg
           cd /Volumes/vulkansdk-macos-1.3.211.0
           sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/VulkanSDK --accept-licenses --default-answer --confirm-command install
+          ls /usr/local/VulkanSDK
           #cat $GITHUB_WORKSPACE/1.3.211.0/setup-env.sh
 
