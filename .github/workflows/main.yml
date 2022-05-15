@@ -31,6 +31,6 @@ jobs:
           wget -q https://sdk.lunarg.com/sdk/download/1.3.211.0/mac/vulkansdk-macos-1.3.211.0.dmg
           hdiutil attach vulkansdk-macos-1.3.211.0.dmg
           cd /Volumes/vulkansdk-macos-1.3.211.0
-          sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --accept-licenses --default-answer --confirm-command install
-          cat $GITHUB_WORKSPACE/1.3.211.0/setup-env.sh
+          sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/VulkanSDK --accept-licenses --default-answer --confirm-command install
+          #cat $GITHUB_WORKSPACE/1.3.211.0/setup-env.sh
 
