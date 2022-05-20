@@ -33,7 +33,7 @@ jobs:
           pushd /Volumes/vulkansdk-macos-1.3.211.0
           sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/VulkanSDK --accept-licenses --default-answer --confirm-command install
           popd
-          sudo hdiutil detach vulkansdk-macos-1.3.211.0.dmg
+          sudo hdiutil detach /Volumes/vulkansdk-macos-1.3.211.0
           #cat /usr/local/VulkanSDK/setup-env.sh
           #bash /usr/local/VulkanSDK/setup-env.sh
 
