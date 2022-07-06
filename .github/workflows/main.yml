@@ -28,6 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: download, mount and install vulkan
         run: |
-          wget -q wget https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
+          wget -q https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
           sudo hdiutil attach https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
           ls /Volumes
