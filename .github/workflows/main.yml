@@ -28,34 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: download, mount and install vulkan
         run: |
-          wget -q https://sdk.lunarg.com/sdk/download/1.3.211.0/mac/vulkansdk-macos-1.3.211.0.dmg
-          sudo hdiutil attach vulkansdk-macos-1.3.211.0.dmg
-          pushd /Volumes/vulkansdk-macos-1.3.211.0
-          #sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/VulkanSDK --accept-licenses --default-answer --confirm-command install
-          popd
-          sudo hdiutil detach /Volumes/vulkansdk-macos-1.3.211.0
-          rm -rv *dmg
-          #cat /usr/local/VulkanSDK/setup-env.sh
-          #bash /usr/local/VulkanSDK/setup-env.sh
-
-      #- name: Prepare ps2dev folder
-        #run: |
-          #tar -zcvf VulkanSDK.tar.gz /usr/local/VulkanSDK
-
-      #- name: Release
-        #if: github.ref == 'refs/heads/master'
-        #uses: softprops/action-gh-release@v1
-       # with:
-          #prerelease: false
-          #name: "Latest build"
-          #files: vulkanSDK.tar.gz
-          #tag_name: latest
-       # env:
-         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      #- name: Upload Package
-       # uses: actions/upload-artifact@v1
-        #with:
-         # path: VulkanSDK.tar.gz
-         # name: VulkanSDK
-
+          wget -q wget https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
+          sudo hdiutil attach https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
+          ls /Volumes
